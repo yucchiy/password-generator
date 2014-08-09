@@ -5,15 +5,19 @@ app = new Vue {
   data: {
     generator: {
       master_token: '',
-      prefix: '',
-      interval: '',
-      length: ''
+      length: '',
+      interval: 1,
+      prefix: 5
+    },
+    msg: {
+      success: false,
+      fail: false
     },
     validation: {
       master_token: false,
-      prefix: false,
-      interval: false,
       length: false
+      prefix: true,
+      interval: true,
     }
   },
   filters: {
@@ -33,25 +37,30 @@ app = new Vue {
   methods: {
     save: (e) ->
       e.preventDefault()
+      @generator.prefix = 5
+      @generator.interval = 1
       if @validation.master_token and @validation.prefix and @validation.interval and @validation.length
+        that = @
         chrome.storage.sync.set {
           master_token: @generator.master_token,
           prefix: @generator.prefix,
           interval: @generator.interval,
           length: @generator.length
         }, () ->
-          console.log "Saved"
+          that.msg.success = true
+          that.msg.fail = false
       else
-        console.log "Todo: Error"
+        that.msg.success = false
+        that.msg.fail = true
   }
 }
 
 restore = () ->
   chrome.storage.sync.get {
     master_token: MyUtil.randomStrings(10),
-    prefix: 10,
+    prefix: 5,
     interval: 1,
-    length: 10
+    length: 20
   }, (items) ->
     app.generator.master_token = items.master_token
     app.generator.prefix = items.prefix

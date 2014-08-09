@@ -29,9 +29,12 @@
           </div>
 
           <div class="button-outer">
-            <button type="submit" class="btn btn-success">設定を保存する</button>
+            <button type="submit" class="btn btn-success" v-attr="disabled: !validation.master_token || !validation.length">設定を保存する</button>
           </div>
         </form>
+
+        <p class="message-info" v-show="msg.success">設定を保存しました</p>
+        <p class="message-info" v-show="msg.fail">設定の保存に失敗しました</p>
       </div>
 
     </div>
@@ -53,7 +56,6 @@
     <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
 
     <!-- build:js scripts/util.js -->
     <script src="scripts/util.js"></script>

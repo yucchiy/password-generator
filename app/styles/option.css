@@ -54,3 +54,11 @@ body {
 .help-block.error {
   color: red;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000349}}
+.message-info {
+  color: #666;
+  text-align: center;
+  color: #EC4A19;
+  margin-top: 15px;
+}

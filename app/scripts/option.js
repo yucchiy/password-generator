@@ -7,15 +7,19 @@
     data: {
       generator: {
         master_token: '',
-        prefix: '',
-        interval: '',
-        length: ''
+        length: '',
+        interval: 1,
+        prefix: 5
+      },
+      msg: {
+        success: false,
+        fail: false
       },
       validation: {
         master_token: false,
-        prefix: false,
-        interval: false,
-        length: false
+        length: false,
+        prefix: true,
+        interval: true
       }
     },
     filters: {
@@ -38,18 +42,24 @@
     },
     methods: {
       save: function(e) {
+        var that;
         e.preventDefault();
+        this.generator.prefix = 5;
+        this.generator.interval = 1;
         if (this.validation.master_token && this.validation.prefix && this.validation.interval && this.validation.length) {
+          that = this;
           return chrome.storage.sync.set({
             master_token: this.generator.master_token,
             prefix: this.generator.prefix,
             interval: this.generator.interval,
             length: this.generator.length
           }, function() {
-            return console.log("Saved");
+            that.msg.success = true;
+            return that.msg.fail = false;
           });
         } else {
-          return console.log("Todo: Error");
+          that.msg.success = false;
+          return that.msg.fail = true;
         }
       }
     }
@@ -58,9 +68,9 @@
   restore = function() {
     return chrome.storage.sync.get({
       master_token: MyUtil.randomStrings(10),
-      prefix: 10,
+      prefix: 5,
       interval: 1,
-      length: 10
+      length: 20
     }, function(items) {
       app.generator.master_token = items.master_token;
       app.generator.prefix = items.prefix;
