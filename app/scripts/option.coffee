@@ -57,7 +57,7 @@ app = new Vue {
 
 restore = () ->
   chrome.storage.sync.get {
-    master_token: MyUtil.randomStrings(10),
+    master_token: '',
     prefix: 5,
     interval: 1,
     length: 20

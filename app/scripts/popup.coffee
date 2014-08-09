@@ -6,11 +6,21 @@ app = new Vue {
     generate: ->
       user = @user
       chrome.storage.sync.get {
-        master_token: 'deMCP0Dsj8Kh',
-        prefix: 10,
+        master_token: '',
+        prefix: 5,
         interval: 1,
-        length: 10
+        length: 20
       }, (items) ->
+        if items.master_token == ''
+          items.master_token = MyUtil.randomStrings(20)
+          chrome.storage.sync.set {
+            master_token: items.master_token,
+            prefix: items.prefix,
+            interval: items.interval,
+            length: items.length
+          }, () ->
+            console.log "saved"
+
         pass = _.without(
           base64_encode(pack('H*', md5(user.username + "@" + user.domain + ":" + items.master_token))).split(''),
           '+', '/', '='
