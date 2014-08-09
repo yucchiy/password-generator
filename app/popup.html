@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css styles/main.css -->
-    <link href="styles/main.css" rel="stylesheet">
+    <!-- build:css styles/popup.css -->
+    <link href="styles/popup.css" rel="stylesheet">
     <!-- endbuild -->
   </head>
   <body>
-    <div id="password-generator">
-      <h1>Password Generator</h1>
+    <div class="container" id="password-generator">
+      <h1 class="title">Password Generator</h1>
       <div class="form-group">
         <label for="username">Username</label>
         <input class="form-control" v-on="keyup:generate" v-model="user.username">

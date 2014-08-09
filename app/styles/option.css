@@ -1,0 +1,56 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\000031}}
+body {
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  background-color: #f0f0f0;
+  font-size: 14px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\000037}}
+.container {
+  width: 600px;
+  color: #383838;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000312}}
+.box {
+  background-color: #fff;
+  border: 1px solid #cacaca;
+  padding: 30px 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -border-radius: 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000321}}
+.title {
+  color: #777;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000329}}
+.form-group {
+  margin-bottom: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000331}}
+.form-group label {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000337}}
+.button-outer {
+  margin: auto 0;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000340}}
+.button-outer .btn {
+  width: 40%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/yucchiy\/src\/github\.com\/yucchiy\/password-generator\/app\/styles\/option\.scss}line{font-family:\0000345}}
+.help-block.error {
+  color: red;
+}

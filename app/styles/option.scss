@@ -1,0 +1,47 @@
+body {
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  background-color: #f0f0f0;
+  font-size: 14px;
+}
+
+.container {
+  width: 600px;
+  color: #383838;
+}
+
+.box {
+  background-color: #fff;
+  border: 1px solid #cacaca;
+  padding: 30px 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -border-radius: 5px;
+}
+
+.title {
+  color: #777;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+  label {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+
+.button-outer {
+  margin: auto 0;
+  text-align: center;
+  .btn {
+    width: 40%;
+  }
+}
+
+.help-block.error {
+  color: red;
+}
