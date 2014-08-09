@@ -4,7 +4,8 @@
   "dependencies": {
     "vue": "~0.10.6",
     "uri.js": "~1.13.2",
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "phpjs": "*"
   },
   "devDependencies": {}
 }
