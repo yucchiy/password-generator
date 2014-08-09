@@ -8,7 +8,7 @@
       generator: {
         master_token: '',
         length: '',
-        interval: 1,
+        interval: 2,
         prefix: 5
       },
       msg: {
