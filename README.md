@@ -15,7 +15,7 @@ Password Generator
 
 ### インストール
 
-#### ローカルで自分でビルド
+#### ローカルで自分でビルドしてインストール
 
 自分でビルドを行うには, `npm`と`bower`が必要である.
 
@@ -23,17 +23,20 @@ Password Generator
 git clone git@github.com:yucchiy/password-generator.git
 cd password-generator
 npm install && bower install
+grunt build
 ```
 GoogleChromeより, [extensionの設定画面](chrome://extensions/)を開き,
-`app`ディレクトリを「Load unpacked extension」で読み込むことでインストールできる.
+`dist`ディレクトリを「Load unpacked extension」で読み込むことでインストールできる.
 
-#### ビルド済みのパッケージをダウンロード
+#### ビルド済みのパッケージからインストール
 
+[ここから](https://github.com/yucchiy/password-generator/raw/master/package/password%20generator-master.zip) ビルド済みの
+パッケージをzipでダウンロードできます. 展開後に生成されるディレクトリを[extensionの設定画面](chrome://extensions/)よりロードすることでインストールできる.
 
 
 #### ウェブストアからインストール
 
-そのうち申請します.
+そのうち申請します. アイコン募集中.
 
 
 ### 初期設定
