@@ -27,6 +27,10 @@ npm install && bower install
 GoogleChromeより, [extensionの設定画面](chrome://extensions/)を開き,
 `app`ディレクトリを「Load unpacked extension」で読み込むことでインストールできる.
 
+#### ビルド済みのパッケージをダウンロード
+
+
+
 #### ウェブストアからインストール
 
 そのうち申請します.

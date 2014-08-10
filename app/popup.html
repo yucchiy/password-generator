@@ -39,7 +39,7 @@
 
       <div v-show="!initialized">
         <p>設定を完了させてください</p>
-        <a target="_blank" href="option.html">オプション画面へ</a>
+        <a target="_blank" href="options.html">オプション画面へ</a>
       </div>
     </div>
     <!-- build:js scripts/vendor.js -->
@@ -59,11 +59,12 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
-    <script src="bower_components/phpjs/functions/xml/utf8_encode.js"></script>
-    <script src="bower_components/phpjs/functions/strings/md5.js"></script>
-    <script src="bower_components/phpjs/functions/misc/pack.js"></script>
-    <script src="bower_components/phpjs/functions/url/base64_encode.js"></script>
     <!-- endbuild -->
+
+    <script src="scripts/utf8_encode.js"></script>
+    <script src="scripts/md5.js"></script>
+    <script src="scripts/pack.js"></script>
+    <script src="scripts/base64_encode.js"></script>
 
     <!-- build:js scripts/util.js -->
     <script src="scripts/util.js"></script>
