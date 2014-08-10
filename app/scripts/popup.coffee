@@ -11,16 +11,6 @@ app = new Vue {
         interval: 1,
         length: 20
       }, (items) ->
-        if items.master_token == ''
-          items.master_token = MyUtil.randomStrings(20)
-          chrome.storage.sync.set {
-            master_token: items.master_token,
-            prefix: items.prefix,
-            interval: items.interval,
-            length: items.length
-          }, () ->
-            console.log "saved"
-
         pass = _.without(
           base64_encode(pack('H*', md5(user.username + "@" + user.domain + ":" + items.master_token))).split(''),
           '+', '/', '='
@@ -30,7 +20,18 @@ app = new Vue {
           pass.slice(items.prefix).join('')
           ,(val, idx) -> return idx % items.interval == 0
         ).join('').substring(0, items.length)
-
+    showPassword: (event) ->
+      event.target.setAttribute 'type', 'text'
+    hidePassword: (event) ->
+      event.target.setAttribute 'type', 'password'
+    copyToClipboard: ->
+      ta = document.createElement 'textarea'
+      ta.style.cssText = "position:absolute;left:-100%"
+      document.body.appendChild ta
+      ta.value = @user.password
+      ta.select()
+      document.execCommand 'copy'
+      document.body.removeClild ta
   },
   data: {
     user: {

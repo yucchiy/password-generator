@@ -26,14 +26,20 @@
 
         <div class="form-group">
           <label for="password">Password</label>
-          <input class="form-control" v-model="user.password">
+          <div class="row">
+            <div class="col-xs-9">
+              <input type="password" class="form-control" v-model="user.password" v-on="focus:showPassword, blur:hidePassword">
+            </div>
+            <div class="col-xs-3">
+              <button class="btn btn-primary" v-on="click:copyToClipboard">コピー</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div v-show="!initialized">
         <p>設定を完了させてください</p>
         <a target="_blank" href="option.html">オプション画面へ</a>
-        {{ user.password }}
       </div>
     </div>
     <!-- build:js scripts/vendor.js -->
