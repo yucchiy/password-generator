@@ -26,12 +26,12 @@ npm install && bower install
 grunt build
 ```
 GoogleChromeより, [extensionの設定画面](chrome://extensions/)を開き,
-`dist`ディレクトリを「Load unpacked extension」で読み込むことでインストールできる.
+`dist`ディレクトリを「Load unpacked extension」することで読み込むことでインストールできる.
 
 #### ビルド済みのパッケージからインストール
 
 [ここから](https://github.com/yucchiy/password-generator/raw/master/package/password%20generator-master.zip) ビルド済みの
-パッケージをzipでダウンロードできます. 展開後に生成されるディレクトリを[extensionの設定画面](chrome://extensions/)よりロードすることでインストールできる.
+パッケージをzipでダウンロードできる. 展開後に生成されるディレクトリを[extensionの設定画面](chrome://extensions/)よりロードすることでインストールできる.
 
 
 #### ウェブストアからインストール
