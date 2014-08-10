@@ -15,8 +15,22 @@ Password Generator
 
 ### インストール
 
-各々の環境にダウンロードし, GoogleChromeより, [extensionの設定画面](chrome://extensions/)を開き,
+#### ローカルで自分でビルド
+
+自分でビルドを行うには, `npm`と`bower`が必要である.
+
+```
+git clone git@github.com:yucchiy/password-generator.git
+cd password-generator
+npm install && bower install
+```
+GoogleChromeより, [extensionの設定画面](chrome://extensions/)を開き,
 `app`ディレクトリを「Load unpacked extension」で読み込むことでインストールできる.
+
+#### ウェブストアからインストール
+
+そのうち申請します.
+
 
 ### 初期設定
 
@@ -42,7 +56,7 @@ Password Generator
 実装はCoffeeScriptで行うと以下の通り.
 
 ```
-pass = base64_encode(pack('H*', md5(username + "@" + domain + ":" + master_token))).split('')
+base64_encode(pack('H*', md5(username + "@" + domain + ":" + master_token))).split('')
 ```
 
 ちなみに, `base64_encode`などの関数は, [php.js](http://phpjs.org/)を利用している.
