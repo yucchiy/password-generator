@@ -37,9 +37,13 @@ app = new Vue {
       domain: '',
       username: '',
       password: ''
-    }
+    },
+    initialized: false
   },
 }
+
+chrome.storage.sync.get {'master_token': null}, (items) ->
+  app.initialized = items.master_token isnt null
 
 if chrome.tabs
   chrome.tabs.getSelected window.id, (tab) ->

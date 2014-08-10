@@ -11,6 +11,7 @@
         interval: 2,
         prefix: 5
       },
+      test: "",
       msg: {
         success: false,
         fail: false

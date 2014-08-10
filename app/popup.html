@@ -12,20 +12,28 @@
   </head>
   <body>
     <div class="container" id="password-generator">
-      <h1 class="title">Password Generator</h1>
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input class="form-control" v-on="keyup:generate" v-model="user.username">
+      <div v-show="initialized">
+        <h1 class="title">Password Generator</h1>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input class="form-control" v-on="keyup:generate" v-model="user.username">
+        </div>
+
+        <div class="form-group">
+          <label for="domain">Domain</label>
+          <input class="form-control" v-on="keyup:generate" v-model="user.domain">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="form-control" v-model="user.password">
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="domain">Domain</label>
-        <input class="form-control" v-on="keyup:generate" v-model="user.domain">
-      </div>
-
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input class="form-control" v-model="user.password">
+      <div v-show="!initialized">
+        <p>設定を完了させてください</p>
+        <a target="_blank" href="option.html">オプション画面へ</a>
+        {{ user.password }}
       </div>
     </div>
     <!-- build:js scripts/vendor.js -->

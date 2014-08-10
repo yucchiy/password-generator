@@ -38,8 +38,15 @@
         domain: '',
         username: '',
         password: ''
-      }
+      },
+      initialized: false
     }
+  });
+
+  chrome.storage.sync.get({
+    'master_token': null
+  }, function(items) {
+    return app.initialized = items.master_token !== null;
   });
 
   if (chrome.tabs) {
